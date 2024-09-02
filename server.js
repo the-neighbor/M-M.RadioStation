@@ -5,7 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000 || process.env.PORT;
+const port =  process.env.PORT || 3000;
 
 // Use body-parser middleware to parse JSON requests
 app.use(bodyParser.json());
