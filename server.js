@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('cors');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -8,6 +9,7 @@ const port = 3000 || process.env.PORT;
 
 // Use body-parser middleware to parse JSON requests
 app.use(bodyParser.json());
+app.use(cors());
 
 let nowPlaying = {}; //empty object for offline state
 let history = []; //empty array for offline state
